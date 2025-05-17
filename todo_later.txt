@@ -1,0 +1,3 @@
+1. Resend verification email feature
+2. forgot password feature IMPORTANT
+3. Redirect after verification email

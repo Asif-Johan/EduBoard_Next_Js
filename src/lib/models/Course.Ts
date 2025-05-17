@@ -4,9 +4,8 @@ import mongoose from 'mongoose';
 const courseSchema = new mongoose.Schema({
   title: { type: String, required: true },
   admin_only_code: { type: String, required: true },
-  code: { type: String, required: true },
-  semester: { type: String },
-  teacher: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  courseCode: { type: String, required: true },
+  teacherId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, { timestamps: true });
 
 export const Course = mongoose.models.Course || mongoose.model('Course', courseSchema);
