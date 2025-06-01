@@ -113,7 +113,7 @@ export default function StudentSignupPage() {
 
         <p className="text-sm text-center text-gray-500">
           Already have an account?{' '}
-          <Link href="/login" className="text-[#2563EB] font-medium hover:underline">
+          <Link href="/signin" className="text-[#2563EB] font-medium hover:underline">
             Log in
           </Link>
         </p>

@@ -16,13 +16,14 @@ export default function LoginPage() {
     try {
       setLoading(true);
       const response = await axios.post('/api/auth/signin', form);
+      console.log(response);
       toast.success(response.data.message || 'Login successful');
       
       // Optional: redirect based on role
       if (response.data.user.role === 'student') {
-        router.push('/dashboard/student');
+        router.push(`/dashboard/student/${response.data.user.id}`);
       } else if (response.data.user.role === 'teacher') {
-        router.push('/dashboard/teacher');
+        router.push(`/dashboard/teacher/${response.data.user.id}`);
       } else {
         router.push('/');
       }
